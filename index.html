@@ -5,8 +5,191 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/tailwind.css">
     <title>Personal Portfolio</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Montagu+Slab:opsz,wght@16..144,100..700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+
 </head>
-<body>
-    <h1>This is heading</h1>
+<body class="bg-black text-white manrope-font">
+    <div class="container lg:px-[120px]">
+
+        <!-- navbar start -->
+
+        <nav class="flex justify-between items-center lg:py-10 lg:px-4">
+            <p class="text-4xl font-bold">MR. <span class="text-[#ffbb34]">KHAN</span></p>
+            <ul class="flex justify-between items-center gap-7 lg:text-lg">
+                <li><a class="hover:border-b-4 border-[#ffbb34] hover:transition-all" href="#">Home</a></li>
+                <li><a class="hover:border-b-4 border-[#ffbb34] hover:transition-all" href="#">About Me</a></li>
+                <li><a class="hover:border-b-4 border-[#ffbb34] hover:transition-all" href="#">Projects</a></li>
+                <li><a class="hover:border-b-4 border-[#ffbb34] hover:transition-all" href="#">Testimonial</a></li>
+            </ul>
+            <button class="bg-[#ffbb34] text-black rounded-full px-8 py-3 font-semibold">Download CV</button>
+        </nav>
+
+        <!-- navbar end -->
+
+        <!-- banner start -->
+
+        <section class="sections mb-16">
+            <div class="banner flex justify-between items-end">
+                <div class="left w-[650px] pb-6">
+                    <p class="text-gray-400">Web Developer</p>
+                    <P class="montagu-slab-font text-[60px]">HI! THIS IS <br><span class="text-[#ffbb34]">AL AMIN KHAN</span></P>
+                    <p class="text-[#797C86]">As a web designer with four years of experience, I specialize in creating visually appealing and user-friendly websites. My expertise includes responsive design, UI/UX principles, and collaborating with clients to bring their visions to life.</p>
+                    <div class="buttons mt-10 flex">
+                        <button class="bg-[#ffbb34] text-black rounded-full px-8 py-3 font-semibold ">Let's Connect</button>
+                        <img class="px-4 hover:cursor-pointer" src="images/Frame.png" alt="Frame">
+                    </div>
+                </div>
+                <div class="right pr-8">
+                    <img src="images/background image.png" alt="My Photo">
+                </div>
+            </div>
+        </section>
+
+        <!-- banner end -->
+
+        <!-- Specialties start -->
+
+        <section class="sections flex flex-col my-[90px]">
+            <div class="text-center leading-8">
+                <p class="text-[#797C86] font-semibold">SPECIALITIES</p>
+                <p class="font-semibold text-3xl my-3.5">MY SPECIALITIES</p>
+                <P class="text-[#797C86] ">As a web designer with four years of experience, I specialize in creating visually appealing <br> and user-friendly websites. My expertise includes responsive design.</P>
+            </div>
+            <div class="grid grid-cols-4 gap-5 pt-12">
+                <div class="grid-1 bg-gradient-to-r from-[#0E0E10] to-[#5d5d663b] flex flex-col items-center px-6 py-11 rounded-sm">
+                    <img src="images/Vector 1.png" alt="Computer">
+                    <p class="py-3 font-bold">Front-End Development</p>
+                    <p class="text-base text-[#E6E6E682] text-center">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                </div>                
+                <div class="grid-2 bg-gradient-to-r from-[#0E0E10] to-[#5d5d663b] flex flex-col items-center px-6 py-11 rounded-sm">
+                    <img src="images/Vector 2.png" alt="Computer">
+                    <p class="py-3 font-bold">Back-End Development</p>
+                    <p class="text-base text-[#E6E6E682] text-center">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                </div>                
+                <div class="grid-3 bg-gradient-to-r from-[#0E0E10] to-[#5d5d663b] flex flex-col items-center px-6 py-11 rounded-sm">
+                    <img src="images/Vector 3.png" alt="Computer">
+                    <p class="py-3 font-bold">Full-Stack Development</p>
+                    <p class="text-base text-[#E6E6E682] text-center">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                </div>                
+                <div class="grid-4 bg-gradient-to-r from-[#0E0E10] to-[#5d5d663b] flex flex-col items-center px-6 py-11 rounded-sm">
+                    <img src="images/Vector 4.png" alt="Computer">
+                    <p class="py-3 font-bold">Web Application Security</p>
+                    <p class="text-base text-[#E6E6E682] text-center">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                </div>                
+                <div class="grid-5 bg-gradient-to-r from-[#0E0E10] to-[#5d5d663b] flex flex-col items-center px-6 py-11 rounded-sm">
+                    <img src="images/Vector 5.png" alt="Computer">
+                    <p class="py-3 font-bold">E-commerce Development</p>
+                    <p class="text-base text-[#E6E6E682] text-center">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                </div>                
+                <div class="grid-6 bg-gradient-to-r from-[#0E0E10] to-[#5d5d663b] flex flex-col items-center px-6 py-11 rounded-sm">
+                    <img src="images/Vector 6.png" alt="Computer">
+                    <p class="py-3 font-bold">Cloud-Based Development</p>
+                    <p class="text-base text-[#E6E6E682] text-center">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                </div>                
+                <div class="grid-7 bg-gradient-to-r from-[#0E0E10] to-[#5d5d663b] flex flex-col items-center px-6 py-11 rounded-sm">
+                    <img src="images/Vector 7.png" alt="Computer">
+                    <p class="py-3 font-bold">Progressive Web Apps</p>
+                    <p class="text-base text-[#E6E6E682] text-center">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                </div>                
+                <div class="grid-8 bg-gradient-to-r from-[#0E0E10] to-[#5d5d663b] flex flex-col items-center px-6 py-11 rounded-sm">
+                    <img src="images/Vector 8.png" alt="Computer">
+                    <p class="py-3 font-bold">AI-Powered Development</p>
+                    <p class="text-base text-[#E6E6E682] text-center">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                </div>   
+            </div>
+        </section>
+
+        <!-- Specialties end -->
+
+        <!-- Recent works start -->
+
+        <section class="sections flex flex-col my-[90px]">
+            <div class="text-center leading-8">
+                <p class="text-[#797C86] font-semibold">RECENT WORKS</p>
+                <p class="font-semibold text-3xl my-3.5">MY RECENT WORKS</p>
+                <P class="text-[#797C86] ">As a web designer with four years of experience, I specialize in creating <br> visually appealing and user-friendly websites. My expertise includes <br> responsive design..</P>
+            </div>
+            <div class="grid grid-cols-3 gap-5 pt-12">
+                <div class="grid-1 hover:opacity-25">
+                    <img src="images/Group Picture.jpg" alt="Recent Works">
+                </div>
+                <div class="grid-2 hover:opacity-25">
+                    <img src="images/Group Picture.jpg" alt="Recent Works">
+                </div>
+                <div class="grid-3 hover:opacity-25">
+                    <img src="images/Group Picture.jpg" alt="Recent Works">
+                </div>
+                <div class="grid-4 hover:opacity-25">
+                    <img src="images/Group Picture.jpg" alt="Recent Works">
+                </div>
+                <div class="grid-5 hover:opacity-25">
+                    <img src="images/Group Picture.jpg" alt="Recent Works">
+                </div>
+                <div class="grid-6 hover:opacity-25">
+                    <img src="images/Group Picture.jpg" alt="Recent Works">
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Recent Works end -->
+
+        <!-- Service Start -->
+
+         <section class="sections flex flex-col my-[120px]">
+            <div class="text-center leading-8">
+                <p class="text-[#797C86] font-semibold">SERVICES</p>
+                <p class="font-semibold text-3xl my-3.5">MY OTHER SERVICES</p>
+                <P class="text-[#797C86] ">As a web designer with four years of experience, I specialize in creating visually appealing <br> and user-friendly websites. My expertise includes responsive design.</P>
+            </div>
+            <div class="grid grid-cols-4 gap-5 pt-12">
+                <div class="grid-1 bg-gradient-to-r from-[#0E0E10] to-[#5d5d663b] flex flex-col items-center px-6 py-11 rounded-lg border border-[#1C1C21]">
+                    <p class="py-3 font-bold">Website Development</p>
+                    <p class="text-base text-[#E6E6E682] text-center">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                </div>                
+                <div class="grid-2 bg-gradient-to-r from-[#0E0E10] to-[#5d5d663b] flex flex-col items-center px-6 py-11 rounded-lg border border-[#1C1C21]">
+                    <p class="py-3 font-bold">E-Commerce Development</p>
+                    <p class="text-base text-[#E6E6E682] text-center">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                </div>                
+                <div class="grid-3 bg-gradient-to-r from-[#0E0E10] to-[#5d5d663b] flex flex-col items-center px-6 py-11 rounded-lg border border-[#1C1C21]">
+                    <p class="py-3 font-bold">Web App Development</p>
+                    <p class="text-base text-[#E6E6E682] text-center">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                </div>                
+                <div class="grid-4 bg-gradient-to-r from-[#0E0E10] to-[#5d5d663b] flex flex-col items-center px-6 py-11 rounded-lg border border-[#1C1C21]">
+                    <p class="py-3 font-bold">API Dev. & Integration</p>
+                    <p class="text-base text-[#E6E6E682] text-center">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                </div>                
+                <div class="grid-5 bg-gradient-to-r from-[#0E0E10] to-[#5d5d663b] flex flex-col items-center px-6 py-11 rounded-lg border border-[#1C1C21]">
+                    <p class="py-3 font-bold">Cloud-Based Solutions</p>
+                    <p class="text-base text-[#E6E6E682] text-center">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                </div>                
+                <div class="grid-6 bg-gradient-to-r from-[#0E0E10] to-[#5d5d663b] flex flex-col items-center px-6 py-11 rounded-lg border border-[#1C1C21]">
+                    <p class="py-3 font-bold">Web Perform. Optimization</p>
+                    <p class="text-base text-[#E6E6E682] text-center">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                </div>                
+                <div class="grid-7 bg-gradient-to-r from-[#0E0E10] to-[#5d5d663b] flex flex-col items-center px-6 py-11 rounded-lg border border-[#1C1C21]">
+                    <p class="py-3 font-bold">(SEO) Services</p>
+                    <p class="text-base text-[#E6E6E682] text-center">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                </div>                
+                <div class="grid-8 bg-gradient-to-r from-[#0E0E10] to-[#5d5d663b] flex flex-col items-center px-6 py-11 rounded-lg border border-[#1C1C21]">
+                    <p class="py-3 font-bold">Website Maint. & Support</p>
+                    <p class="text-base text-[#E6E6E682] text-center">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                </div>   
+            </div>
+        </section>
+
+        <!-- Service End -->
+
+
+
+    </div>
+
 </body>
 </html>
