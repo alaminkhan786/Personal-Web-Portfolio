@@ -15,39 +15,64 @@
     </style>
 
 </head>
-<body class="bg-black text-white manrope-font">
-    <div class="container lg:px-[120px]">
+<body class="bg-black text-white manrope-font relative">
+    <div class="lg:container lg:px-[120px] px-6 py-6">
 
-        <!-- navbar start -->
+        <!--Full navbar start -->
 
-        <nav class="flex justify-between items-center lg:py-10 lg:px-4">
+        <nav class="flex justify-between items-center py-6 px-4 border-b border-gray-400 border-opacity-30">
             <p class="text-4xl font-bold">MR. <span class="text-[#ffbb34]">KHAN</span></p>
-            <ul class="flex justify-between items-center gap-7 lg:text-lg">
+        
+            <!-- Large Screen Navigation -->
+            <ul class="hidden lg:flex lg:gap-8 lg:text-lg">
+              <li><a class="hover:border-b-4 border-[#ffbb34] hover:transition-all" href="#">Home</a></li>
+              <li><a class="hover:border-b-4 border-[#ffbb34] hover:transition-all" href="#">About Me</a></li>
+              <li><a class="hover:border-b-4 border-[#ffbb34] hover:transition-all" href="#">Projects</a></li>
+              <li><a class="hover:border-b-4 border-[#ffbb34] hover:transition-all" href="#">Testimonial</a></li>
+            </ul>
+            <button class="hidden lg:block bg-[#ffb92d] hover:bg-[#bb8b2d] text-black rounded-full px-8 py-3 font-medium">Download CV</button>
+        
+            <!-- Mobile Menu Icon -->
+            <img id="menu-bar" class="lg:hidden block w-9 hover:cursor-pointer" src="images/menu-bar.png" alt="menu-bar">
+        </nav>
+        
+        <!-- Overlay Menu for Small Devices -->
+        <div id="overlay" class="hidden fixed inset-0 bg-black bg-opacity-70 z-10"></div>
+        <div id="menu-small" class="hidden fixed top-0 right-0 h-full w-2/3 bg-black z-20 transform transition-transform duration-300 ease-in-out translate-x-full">
+        <!-- Close Button -->
+            <button id="close-menu" class="absolute top-4 right-8 text-red-500 text-3xl font-bold">&times;</button>
+    
+        <!-- Menu Items -->
+            <ul class="mt-16 space-y-6 px-6 text-lg flex flex-col justify-center items-center">
                 <li><a class="hover:border-b-4 border-[#ffbb34] hover:transition-all" href="#">Home</a></li>
                 <li><a class="hover:border-b-4 border-[#ffbb34] hover:transition-all" href="#">About Me</a></li>
                 <li><a class="hover:border-b-4 border-[#ffbb34] hover:transition-all" href="#">Projects</a></li>
                 <li><a class="hover:border-b-4 border-[#ffbb34] hover:transition-all" href="#">Testimonial</a></li>
             </ul>
-            <button class="bg-[#ffbb34] text-black rounded-full px-8 py-3 font-semibold">Download CV</button>
-        </nav>
+    
+        <!-- Download CV Button -->
+            <button class="bg-[#ffb92d] hover:bg-[#bb8b2d] text-white rounded-full px-8 py-3 font-semibold mt-10 mx-6 w-full">
+                Download CV
+            </button>
+        </div>
 
-        <!-- navbar end -->
+        <!--Full navbar end -->
 
         <!-- banner start -->
 
-        <section class="sections mb-16">
-            <div class="banner flex justify-between items-end">
-                <div class="left w-[650px] pb-6">
-                    <p class="text-gray-400">Web Developer</p>
-                    <P class="montagu-slab-font text-[60px]">HI! THIS IS <br><span class="text-[#ffbb34]">AL AMIN KHAN</span></P>
-                    <p class="text-[#797C86]">As a web designer with four years of experience, I specialize in creating visually appealing and user-friendly websites. My expertise includes responsive design, UI/UX principles, and collaborating with clients to bring their visions to life.</p>
-                    <div class="buttons mt-10 flex">
-                        <button class="bg-[#ffbb34] text-black rounded-full px-8 py-3 font-semibold ">Let's Connect</button>
-                        <img class="px-4 hover:cursor-pointer" src="images/Frame.png" alt="Frame">
-                    </div>
-                </div>
-                <div class="right pr-8">
+        <section class="sections lg:my-16">
+            <div class="banner lg:flex lg:justify-between lg:items-end lg:relative">
+                <div class="right mb-10 mt-3 lg:absolute lg:right-0 lg:w-[550px]">
                     <img src="images/background image.png" alt="My Photo">
+                </div>
+                <div class="left lg:w-[650px] lg:pb-6">
+                    <p class="text-gray-400 text-xl">Web Developer</p>
+                    <P class="montagu-slab-font text-5xl py-5 lg:text-[60px] ">HI! THIS IS <br><span class="text-[#ffbb34]">AL AMIN KHAN</span></P>
+                    <p class="text-[#797C86]">As a web designer with four years of experience, I specialize in creating visually appealing and user-friendly websites. My expertise includes responsive design, UI/UX principles, and collaborating with clients to bring their visions to life.</p>
+                    <div class="buttons mt-10 lg:flex">
+                        <button class="bg-[#ffb92d] hover:bg-[#bb8b2d] text-black rounded-full px-8 py-3 mb-4 lg:mb-0 lg:mr-5 font-semibold ">Let's Connect</button>
+                        <img class="hover:cursor-pointer w-fit" src="images/Frame.png" alt="Frame">
+                    </div>
                 </div>
             </div>
         </section>
@@ -56,13 +81,13 @@
 
         <!-- Specialties start -->
 
-        <section class="sections flex flex-col my-[90px]">
+        <section class="sections flex flex-col justify-center my-[90px]">
             <div class="text-center leading-8">
                 <p class="text-[#797C86] font-semibold">SPECIALITIES</p>
                 <p class="font-semibold text-3xl my-3.5">MY SPECIALITIES</p>
                 <P class="text-[#797C86] ">As a web designer with four years of experience, I specialize in creating visually appealing <br> and user-friendly websites. My expertise includes responsive design.</P>
             </div>
-            <div class="grid grid-cols-4 gap-5 pt-12">
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 pt-12">
                 <div class="grid-1 bg-gradient-to-r from-[#0E0E10] to-[#5d5d663b] flex flex-col items-center px-6 py-11 rounded-sm">
                     <img src="images/Vector 1.png" alt="Computer">
                     <p class="py-3 font-bold">Front-End Development</p>
@@ -110,13 +135,13 @@
 
         <!-- Recent works start -->
 
-        <section class="sections flex flex-col my-[90px]">
-            <div class="text-center leading-8">
+        <section class="sections flex flex-col justify-center items-center my-[90px]">
+            <div class="text-center leading-8 lg:w-[530px]">
                 <p class="text-[#797C86] font-semibold">RECENT WORKS</p>
                 <p class="font-semibold text-3xl my-3.5">MY RECENT WORKS</p>
-                <P class="text-[#797C86] ">As a web designer with four years of experience, I specialize in creating <br> visually appealing and user-friendly websites. My expertise includes <br> responsive design..</P>
+                <P class="text-[#797C86]">As a web designer with four years of experience, I specialize in creating visually appealing and user-friendly websites. My expertise includes responsive design..</P>
             </div>
-            <div class="grid grid-cols-3 gap-5 pt-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 pt-12">
                 <div class="grid-1 hover:opacity-25">
                     <img src="images/Group Picture.png" alt="Recent Works">
                 </div>
@@ -143,43 +168,43 @@
 
         <!-- Service Start -->
 
-         <section class="sections flex flex-col my-[120px]">
-            <div class="text-center leading-8">
+         <section class="sections flex flex-col justify-center items-center my-[120px]">
+            <div class="text-center leading-8 lg:w-[680px]">
                 <p class="text-[#797C86] font-semibold">SERVICES</p>
                 <p class="font-semibold text-3xl my-3.5">MY OTHER SERVICES</p>
-                <P class="text-[#797C86] ">As a web designer with four years of experience, I specialize in creating visually appealing <br> and user-friendly websites. My expertise includes responsive design.</P>
+                <P class="text-[#797C86] ">As a web designer with four years of experience, I specialize in creating visually appealing and user-friendly websites. My expertise includes responsive design.</P>
             </div>
-            <div class="grid grid-cols-4 gap-5 pt-12">
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 pt-12">
                 <div class="grid-1 bg-gradient-to-r from-[#0E0E10] to-[#5d5d663b] flex flex-col items-center px-6 py-11 rounded-lg border border-[#1C1C21]">
-                    <p class="py-3 font-bold">Website Development</p>
+                    <p class="py-3 font-bold text-center text-xl">Website Development</p>
                     <p class="text-base text-[#E6E6E682] text-center">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
-                </div>                
+                </div>
                 <div class="grid-2 bg-gradient-to-r from-[#0E0E10] to-[#5d5d663b] flex flex-col items-center px-6 py-11 rounded-lg border border-[#1C1C21]">
-                    <p class="py-3 font-bold">E-Commerce Development</p>
+                    <p class="py-3 font-bold text-center text-xl">E-Commerce Development</p>
                     <p class="text-base text-[#E6E6E682] text-center">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
                 </div>                
                 <div class="grid-3 bg-gradient-to-r from-[#0E0E10] to-[#5d5d663b] flex flex-col items-center px-6 py-11 rounded-lg border border-[#1C1C21]">
-                    <p class="py-3 font-bold">Web App Development</p>
+                    <p class="py-3 font-bold text-center text-xl">Web App Development</p>
                     <p class="text-base text-[#E6E6E682] text-center">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
                 </div>                
                 <div class="grid-4 bg-gradient-to-r from-[#0E0E10] to-[#5d5d663b] flex flex-col items-center px-6 py-11 rounded-lg border border-[#1C1C21]">
-                    <p class="py-3 font-bold">API Dev. & Integration</p>
+                    <p class="py-3 font-bold text-center text-xl">API Dev. & Integration</p>
                     <p class="text-base text-[#E6E6E682] text-center">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
                 </div>                
                 <div class="grid-5 bg-gradient-to-r from-[#0E0E10] to-[#5d5d663b] flex flex-col items-center px-6 py-11 rounded-lg border border-[#1C1C21]">
-                    <p class="py-3 font-bold">Cloud-Based Solutions</p>
+                    <p class="py-3 font-bold text-center text-xl">Cloud-Based Solutions</p>
                     <p class="text-base text-[#E6E6E682] text-center">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
                 </div>                
                 <div class="grid-6 bg-gradient-to-r from-[#0E0E10] to-[#5d5d663b] flex flex-col items-center px-6 py-11 rounded-lg border border-[#1C1C21]">
-                    <p class="py-3 font-bold">Web Perform. Optimization</p>
+                    <p class="py-3 font-bold text-center text-xl">Web Perform. Optimization</p>
                     <p class="text-base text-[#E6E6E682] text-center">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
                 </div>                
                 <div class="grid-7 bg-gradient-to-r from-[#0E0E10] to-[#5d5d663b] flex flex-col items-center px-6 py-11 rounded-lg border border-[#1C1C21]">
-                    <p class="py-3 font-bold">(SEO) Services</p>
+                    <p class="py-3 font-bold text-center text-xl">(SEO) Services</p>
                     <p class="text-base text-[#E6E6E682] text-center">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
                 </div>                
                 <div class="grid-8 bg-gradient-to-r from-[#0E0E10] to-[#5d5d663b] flex flex-col items-center px-6 py-11 rounded-lg border border-[#1C1C21]">
-                    <p class="py-3 font-bold">Website Maint. & Support</p>
+                    <p class="py-3 font-bold text-center text-xl">Website Maint. & Support</p>
                     <p class="text-base text-[#E6E6E682] text-center">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
                 </div>   
             </div>
@@ -191,49 +216,49 @@
 
         <section>
             <div>
-                <p class="text-[#797C86] font-semibold">FAQ'S</p>
-                <p class="font-semibold text-5xl my-3.5">FREQUENTLY ASKED QUESTIONS</p>
+                <p class="text-[#797C86] font-semibold text-lg">FAQ'S</p>
+                <p class="font-semibold text-2xl lg:text-5xl my-3.5">FREQUENTLY ASKED QUESTIONS</p>
             </div>
             <div class="faq py-10">
-                <div class="faq-item flex justify-between items-start border-y border-gray-400 border-opacity-20  px-12 py-10">
-                    <div class="text">
+                <div class="faq-item flex justify-between items-start border-y border-gray-400 border-opacity-20 px-12 py-10">
+                    <div class="text w-[80%]">
                         <p class="uppercase text-[#AFB0B6] font-semibold text-xl">What areas of web development do you focus on?</p>
-                        <p class="text-[#797C86] font-semibold text-lg py-5">I specialize in web development, creating websites that deliver unique user experiences.</p>
+                        <p class="text-[#797C86] font-medium text-lg py-5 lg:py-0 lg:pt-6">I specialize in web development, creating websites that deliver unique user experiences.</p>
                     </div>
                     <div>
-                        <img class="border rounded-full border-gray-400 border-opacity-20 py-5 px-4 hover:cursor-pointer" src="images/Vector 9.png" alt="Drop-Down">
+                        <img class="cursor-pointer" src="images/Button.png" alt="Drop-Down">
                     </div>
                 </div>
                 <div class="faq-item flex justify-between items-center border-y border-gray-400 border-opacity-20 px-12 py-10">
-                    <div class="text">
+                    <div class="text w-[80%]">
                         <p class="uppercase text-[#AFB0B6] font-semibold text-xl">How can I schedule a web development consultation with you?</p>
                     </div>
                     <div>
-                        <img class="border rounded-full border-gray-400 border-opacity-20 py-5 px-4 hover:cursor-pointer" src="images/Vector 9.png" alt="Drop-Down">
+                        <img class="cursor-pointer" src="images/Button.png" alt="Drop-Down">
                     </div>
                 </div>
                 <div class="faq-item flex justify-between items-center border-y border-gray-400 border-opacity-20 px-12 py-10">
-                    <div class="text">
+                    <div class="text w-[80%]">
                         <p class="uppercase text-[#AFB0B6] font-semibold text-xl">Can I choose a specific platform for my website?</p>
                     </div>
                     <div>
-                        <img class="border rounded-full border-gray-400 border-opacity-20 py-5 px-4 hover:cursor-pointer" src="images/Vector 9.png" alt="Drop-Down">
+                        <img class="cursor-pointer" src="images/Button.png" alt="Drop-Down">
                     </div>
                 </div>
                 <div class="faq-item flex justify-between items-center border-y border-gray-400 border-opacity-20 px-12 py-10">
-                    <div class="text">
+                    <div class="text w-[80%]">
                         <p class="uppercase text-[#AFB0B6] font-semibold text-xl">What tools and technologies do you use for web development?</p>
                     </div>
                     <div>
-                        <img class="border rounded-full border-gray-400 border-opacity-20 py-5 px-4 hover:cursor-pointer" src="images/Vector 9.png" alt="Drop-Down">
+                        <img class="cursor-pointer" src="images/Button.png" alt="Drop-Down">
                     </div>
                 </div>
                 <div class="faq-item flex justify-between items-center border-y border-gray-400 border-opacity-20 px-12 py-10">
-                    <div class="text">
+                    <div class="text w-[80%]">
                         <p class="uppercase text-[#AFB0B6] font-semibold text-xl">Can I choose a specific platform for my website?</p>
                     </div>
                     <div>
-                        <img class="border rounded-full border-gray-400 border-opacity-20 py-5 px-4 hover:cursor-pointer" src="images/Vector 9.png" alt="Drop-Down">
+                        <img class="cursor-pointer" src="images/Button.png" alt="Drop-Down">
                     </div>
                 </div>
 
@@ -244,56 +269,87 @@
 
     </div>
 
-    <footer class="">
+    <footer>
 
-        <div class="footer-items flex justify-between uppercase lg:px-[200px] lg:py-16 lg:my-20 border-y border-gray-400 border-opacity-20 ">
-            <div class="sotutions">
+        <div class="footer-items lg:flex lg:justify-between lg:text-center  uppercase lg:px-[200px] lg:py-16 lg:mt-20 border-y border-gray-400 border-opacity-20 ">
+            <div class="sotutions px-[90px] py-4 lg:px-0 lg:py-0">
                 <p class="text-[#797C86] font-semibold text-xl my-6">Solutions</p>
-                <p class="text-lg w-fit border-b border-gray-400 border-opacity-60 pb-2 my-4">glintopia</p>
-                <p class="text-lg w-fit border-b border-gray-400 border-opacity-60 pb-2 my-4">fluxway</p>
-                <p class="text-lg w-fit border-b border-gray-400 border-opacity-60 pb-2 my-4">fable's</p>
-                <p class="text-lg w-fit border-b border-gray-400 border-opacity-60 pb-2 my-4">powercore</p>
+                <p class="w-fit text-lg border-b border-gray-400 border-opacity-60 pb-2 my-4">glintopia</p>
+                <p class="w-fit text-lg border-b border-gray-400 border-opacity-60 pb-2 my-4">fluxway</p>
+                <p class="w-fit text-lg border-b border-gray-400 border-opacity-60 pb-2 my-4">fable's</p>
+                <p class="w-fit text-lg border-b border-gray-400 border-opacity-60 pb-2 my-4">powercore</p>
             </div>
-            <div class="sotutions">
+            <div class="customers px-[90px] py-4 lg:px-0 lg:py-0">
                 <p class="text-[#797C86] font-semibold text-xl my-6">customers</p>
-                <p class="text-lg w-fit border-b border-gray-400 border-opacity-60 pb-2 my-4">glintopia</p>
-                <p class="text-lg w-fit border-b border-gray-400 border-opacity-60 pb-2 my-4">fluxway</p>
-                <p class="text-lg w-fit border-b border-gray-400 border-opacity-60 pb-2 my-4">fable's</p>
-                <p class="text-lg w-fit border-b border-gray-400 border-opacity-60 pb-2 my-4">powercore</p>
+                <p class="w-fit text-lg border-b border-gray-400 border-opacity-60 pb-2 my-4">glintopia</p>
+                <p class="w-fit text-lg border-b border-gray-400 border-opacity-60 pb-2 my-4">fluxway</p>
+                <p class="w-fit text-lg border-b border-gray-400 border-opacity-60 pb-2 my-4">fable's</p>
+                <p class="w-fit text-lg border-b border-gray-400 border-opacity-60 pb-2 my-4">powercore</p>
             </div>
-            <div class="sotutions">
-                <p class="text-[#797C86] font-semibold text-xl my-6">partners</p>
-                <p class="text-lg w-fit border-b border-gray-400 border-opacity-60 pb-2 my-4">glintopia</p>
-                <p class="text-lg w-fit border-b border-gray-400 border-opacity-60 pb-2 my-4">fluxway</p>
-                <p class="text-lg w-fit border-b border-gray-400 border-opacity-60 pb-2 my-4">fable's</p>
-                <p class="text-lg w-fit border-b border-gray-400 border-opacity-60 pb-2 my-4">powercore</p>
+            <div class="partners px-[90px] py-4 lg:px-0 lg:py-0">
+                <p class="text-[#797C86] font-semibold text-xl my-6 ">partners</p>
+                <p class="w-fit text-lg border-b border-gray-400 border-opacity-60 pb-2 my-4">glintopia</p>
+                <p class="w-fit text-lg border-b border-gray-400 border-opacity-60 pb-2 my-4">fluxway</p>
+                <p class="w-fit text-lg border-b border-gray-400 border-opacity-60 pb-2 my-4">fable's</p>
+                <p class="w-fit text-lg border-b border-gray-400 border-opacity-60 pb-2 my-4">powercore</p>
             </div>
-            <div class="sotutions">
+            <div class="stakeholders px-[90px] py-4 lg:px-0 lg:py-0">
                 <p class="text-[#797C86] font-semibold text-xl my-6">stakeholders</p>
-                <p class="text-lg w-fit border-b border-gray-400 border-opacity-60 pb-2 my-4">glintopia</p>
-                <p class="text-lg w-fit border-b border-gray-400 border-opacity-60 pb-2 my-4">fluxway</p>
-                <p class="text-lg w-fit border-b border-gray-400 border-opacity-60 pb-2 my-4">fable's</p>
-                <p class="text-lg w-fit border-b border-gray-400 border-opacity-60 pb-2 my-4">powercore</p>
+                <p class="w-fit text-lg border-b border-gray-400 border-opacity-60 pb-2 my-4">glintopia</p>
+                <p class="w-fit text-lg border-b border-gray-400 border-opacity-60 pb-2 my-4">fluxway</p>
+                <p class="w-fit text-lg border-b border-gray-400 border-opacity-60 pb-2 my-4">fable's</p>
+                <p class="w-fit text-lg border-b border-gray-400 border-opacity-60 pb-2 my-4">powercore</p>
             </div>
-            <div class="sotutions">
+            <div class="offerings px-[90px] py-4 lg:px-0 lg:py-0">
                 <p class="text-[#797C86] font-semibold text-xl my-6">offerings</p>
-                <p class="text-lg w-fit border-b border-gray-400 border-opacity-60 pb-2 my-4">glintopia</p>
-                <p class="text-lg w-fit border-b border-gray-400 border-opacity-60 pb-2 my-4">fluxway</p>
-                <p class="text-lg w-fit border-b border-gray-400 border-opacity-60 pb-2 my-4">fable's</p>
-                <p class="text-lg w-fit border-b border-gray-400 border-opacity-60 pb-2 my-4">powercore</p>
+                <p class="w-fit text-lg border-b border-gray-400 border-opacity-60 pb-2 my-4">glintopia</p>
+                <p class="w-fit text-lg border-b border-gray-400 border-opacity-60 pb-2 my-4">fluxway</p>
+                <p class="w-fit text-lg border-b border-gray-400 border-opacity-60 pb-2 my-4">fable's</p>
+                <p class="w-fit text-lg border-b border-gray-400 border-opacity-60 pb-2 my-4">powercore</p>
             </div>
 
         </div>
 
-        <div class="lg:px-[200px] text-[#797C86] flex justify-between pb-12">
-            <div class="policy flex gap-3">
+        <div class="px-7 py-5 lg:px-[200px] lg:py-12 text-[#797C86] lg:flex lg:justify-between text-xl ">
+            <div class="policy flex gap-3 py-4 lg:py-0">
                 <p class="border-r border-gray-500 border-opacity-60 pr-3">Terms & Conditions</p>
                 <p>Privacy Policy</p>
             </div>
-            <p>© 2024 All rights reserved.</p>
+            <p class="pb-5 lg:pb-0">© 2024 All rights reserved.</p>
         </div>
 
     </footer>
+
+
+    <script>
+        // JavaScript for Menu Toggle
+        const menuBar = document.getElementById('menu-bar');
+        const closeMenu = document.getElementById('close-menu');
+        const menuSmall = document.getElementById('menu-small');
+        const overlay = document.getElementById('overlay');
+    
+        // Open Menu
+        menuBar.addEventListener('click', () => {
+          menuSmall.classList.remove('hidden');
+          menuSmall.classList.remove('translate-x-full');
+          menuSmall.classList.add('translate-x-0');
+          overlay.classList.remove('hidden');
+        });
+    
+        // Close Menu
+        closeMenu.addEventListener('click', () => {
+          menuSmall.classList.add('translate-x-full');
+          menuSmall.classList.remove('translate-x-0');
+          overlay.classList.add('hidden');
+        });
+    
+        // Close Menu When Clicking on Overlay
+        overlay.addEventListener('click', () => {
+          menuSmall.classList.add('translate-x-full');
+          menuSmall.classList.remove('translate-x-0');
+          overlay.classList.add('hidden');
+        });
+      </script>
 
 </body>
 </html>
